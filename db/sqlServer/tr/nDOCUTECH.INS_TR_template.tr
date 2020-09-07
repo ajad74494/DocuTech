@@ -1,0 +1,97 @@
+
+/******
+	Author: Asadullah Galib
+	Desc: 
+	Object:  Trigger [nDOCUTECH].[INS_TR_template]    Script Date: 9/5/2019 7:03:47 PM
+******/
+
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+	CREATE TRIGGER [nDOCUTECH].[INS_TR_template]
+	ON [nDOCUTECH].[T_TEMPLATE]
+	FOR INSERT, UPDATE
+	AS
+	BEGIN
+		
+	
+		DECLARE @g_id_env_key			int
+		DECLARE @g_tx_env_name			varchar(256)
+	
+		DECLARE @g_ct_row				int
+		DECLARE @g_id_return_status		int
+	
+		DECLARE @g_id_error_key			int
+		DECLARE @g_tx_err_msg			varchar(1024)
+		DECLARE @g_tx_err_msg_tmp		varchar(1024)
+	
+		IF (	UPDATE(id_template_ver)
+				AND EXISTS	(	SELECT	*
+								FROM	INSERTED I,	DELETED D
+								WHERE	I.id_template_key = D.id_template_key
+								AND		I.id_template_ver <= D.id_template_ver
+							)
+			)
+		BEGIN
+			SELECT @g_tx_err_msg = 'Invalid version data out of synch for INS_TR_template'
+			RAISERROR ('@g_tx_err_msg', 16, 1) WITH SETERROR
+			RETURN
+		END
+	
+		IF (NOT EXISTS (SELECT * FROM DELETED))
+		BEGIN
+			-- INITIAL VERSION
+	
+			INSERT	T_TEMPLATE_AUDIT
+			SELECT	*
+			FROM	INSERTED
+	
+			SELECT @g_ct_row = @@rowcount, @g_id_error_key = @@error
+			SELECT @g_tx_err_msg = 'Error inserting initial version into _audit_table_'
+			IF (@g_id_error_key != 0 )
+			BEGIN
+				RAISERROR ('@g_tx_err_msg', 16, 1) WITH SETERROR
+				RETURN
+			END
+		END
+		ELSE IF (	UPDATE(id_template_ver)
+					AND EXISTS	(	SELECT *
+									FROM	INSERTED I, DELETED D
+									WHERE	I.id_template_key = D.id_template_key
+									AND		I.id_template_ver != D.id_template_ver
+								)
+				)
+		BEGIN
+	
+			INSERT	T_TEMPLATE_AUDIT
+			SELECT	*
+			FROM	INSERTED I
+			WHERE	EXISTS(	SELECT	*
+							FROM	DELETED d
+							WHERE	I.id_template_key = D.id_template_key
+							AND		I.id_template_ver != D.id_template_ver
+						  )
+	
+			SELECT @g_ct_row = @@rowcount, @g_id_error_key = @@error
+			SELECT @g_tx_err_msg = 'Error inserting into _audit_table_'
+			IF (@g_id_error_key != 0 )
+			BEGIN
+				RAISERROR ('@g_tx_err_msg', 16, 1) WITH SETERROR
+				RETURN
+			END
+		END
+	
+		
+	END
+	
+GO
+
+ALTER TABLE [nDOCUTECH].[T_TEMPLATE] ENABLE TRIGGER [INS_TR_template]
+GO
+
+

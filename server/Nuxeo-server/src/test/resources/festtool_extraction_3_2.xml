@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<form:Documents xmlns:form="http://www.abbyy.com/FlexiCapture/Schemas/Export/FormData.xsd" xmlns:addData="http://www.abbyy.com/FlexiCapture/Schemas/Export/AdditionalFormData.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<_festool_extraction_v3:_festool_extraction_v3 xmlns:_festool_extraction_v3="http://www.abbyy.com/FlexiCapture/Schemas/Export/festool_extraction_v3.xsd">
+		<_InvoiceTable>
+			<_description>Order 85564456 Delivery note 55926253
+Your Nexmart order jon30.1.18
+by E D Elson Ltd. Your reference 142831989
+Delivery dated 02.02.2018 from Wendlingen / DE9BC2
+Delivery conditions DDU St Albans
+Delivery by PackServ/Carrier
+Standard saw blade
+160x1,8x20 W18
+HS=82023900 Weight: 8.250 KG
+EAN-Code= 4014549223598</_description>
+			<_partNo>500458</_partNo>
+			<_qty>30</_qty>
+			<_unitPrice>29.75</_unitPrice>
+			<_discount>60.00- %</_discount>
+			<_total>357.00</_total>
+		</_InvoiceTable>
+		<_InvoiceTable>
+			<_description>Panther saw blade
+160x1,8x20 PW12
+HS=82023900 Weight: 8.040 KG
+EAN-Code= 4014549223628</_description>
+			<_partNo>500460</_partNo>
+			<_qty>30</_qty>
+			<_unitPrice>40.80</_unitPrice>
+			<_discount>60.00- %</_discount>
+			<_total>489.60</_total>
+		</_InvoiceTable>
+		<_InvoiceTable>
+			<_description>Fine tooth saw blade
+160x1,8x20 W32
+HS=82023900 Weight: 8.250 KG
+EAN-Code= 4014549223611</_description>
+			<_partNo>500459</_partNo>
+			<_qty>30</_qty>
+			<_unitPrice>49.25</_unitPrice>
+			<_discount>60.00- %</_discount>
+			<_total>591.00</_total>
+		</_InvoiceTable>
+		<_InvoiceTable>
+			<_description>Universal saw blade
+260x2,5x30 W60
+HS=82023900 Weight: 4.540 KG
+EAN-Code= 4014549085479</_description>
+			<_partNo>494604</_partNo>
+			<_qty>5</_qty>
+			<_unitPrice>118.15</_unitPrice>
+			<_discount>60.00- %</_discount>
+			<_total>236.30</_total>
+		</_InvoiceTable>
+		<_InvoiceTable>
+			<_description>Fine tooth saw blade
+260x2,5x30 W80
+HS=82023900 Weight: 4.485 KG
+EAN-Code= 4014549085462</_description>
+			<_partNo>494605</_partNo>
+			<_qty>5</_qty>
+			<_unitPrice>141.70</_unitPrice>
+			<_discount>60.00- %
+- Page 2 -</_discount>
+			<_total>283.40</_total>
+		</_InvoiceTable>
+		<_InvoiceTable>
+			<_description>Value of goods Carriage Packing</_description>
+			<_partNo>Net-Invoice-a</_partNo>
+			<_qty>mount</_qty>
+			<_unitPrice>VAT % VA</_unitPrice>
+			<_discount>&lt;T Invoi</_discount>
+			<_total>ice amount</_total>
+		</_InvoiceTable>
+		<_lCurrency>GBP</_lCurrency>
+		<_lRes>534</_lRes>
+		<_sFestool>festool</_sFestool>
+		<_AssociationMembershipNo>E026C000</_AssociationMembershipNo>
+		<_Order>85564456</_Order>
+	</_festool_extraction_v3:_festool_extraction_v3>
+</form:Documents>

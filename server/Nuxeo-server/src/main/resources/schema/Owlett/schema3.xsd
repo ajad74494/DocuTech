@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid Technologies Online Tools 1.0 (https://www.liquid-technologies.com) -->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="_InvoiceNo" type="xs:string" />
+  <xs:element name="_Address" type="xs:string" />
+  <xs:element name="_DateOfInvoice" type="xs:string" />
+  <xs:element name="_TaxPointDate" type="xs:string" />
+  <xs:element name="_CustomerOrderNo" type="xs:string" />
+  <xs:element name="_DespatchDate" type="xs:string" />
+  <xs:element name="_CustomerACNo" type="xs:string" />
+  <xs:element name="_InvoiceTotal" type="xs:decimal" />
+  <xs:element name="_Table">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="_V" type="xs:string" />
+        <xs:element name="_ProductCode" type="xs:string" />
+        <xs:element name="_Description" type="xs:string" />
+        <xs:element name="_Qty" type="xs:unsignedByte" />
+        <xs:element name="_Price" type="xs:string" />
+        <xs:element name="_Disc" type="xs:string" />
+        <xs:element name="_Amount" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

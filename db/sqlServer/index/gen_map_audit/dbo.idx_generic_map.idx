@@ -1,0 +1,9 @@
+/****** Object:  Index [idx_generic_map]    Script Date: 18/12/2019 11:56:33 ******/
+CREATE NONCLUSTERED INDEX [idx_generic_map] ON [dbo].[T_GENERIC_MAP_AUDIT]
+(
+	[id_from_key] ASC,
+	[id_from_type_key] ASC,
+	[id_to_key] ASC,
+	[id_to_type_key] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, FILLFACTOR = 80) ON [PRIMARY]
+GO

@@ -1,0 +1,12 @@
+SET ANSI_PADDING ON
+GO
+/****** Object:  Index [idx_pref]    Script Date: 18/12/2019 11:39:47 ******/
+CREATE UNIQUE NONCLUSTERED INDEX [idx_pref] ON [dbo].[T_PREFERENCE_AUDIT]
+(
+	[id_pref_type_value_key] ASC,
+	[id_pref_type_value_key_value] ASC,
+	[tx_pref_group] ASC,
+	[tx_pref_name] ASC,
+	[id_pref_ver] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, FILLFACTOR = 80) ON [PRIMARY]
+GO

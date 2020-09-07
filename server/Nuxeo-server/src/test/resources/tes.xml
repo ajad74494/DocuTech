@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form:Documents xmlns:form="http://www.abbyy.com/FlexiCapture/Schemas/Export/FormData.xsd" xmlns:addData="http://www.abbyy.com/FlexiCapture/Schemas/Export/AdditionalFormData.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<_Festool_Document_definition:_Festool_Document_definition addData:ImagePath="Festool_Invoice11_2.pdf" xmlns:_Festool_Document_definition="http://www.abbyy.com/FlexiCapture/Schemas/Export/Festool_Document_definition.xsd">
+		<_Festool/>
+		<_BatchNo>0080 0080 01 40</_BatchNo>
+		<_Currency>GBP</_Currency>
+		<_RepNo>534</_RepNo>
+		<_CustomerNo>8007329</_CustomerNo>
+		<_DocumentNo>208219096</_DocumentNo>
+		<_Date>01.02.2018</_Date>
+		<_page1>1</_page1>
+		<_ParagraphFrom>Festool UK Limited
+Saxham Business Park
+Saxham ,Nr Bury St. Edmunds
+Suffolk IP28 6RX
+Tel: 01284-760791
+Fax: 01284-702156
+www.festool.co.uk</_ParagraphFrom>
+		<_ParagraphTo>E D Elson Ltd
+Unit 1 Bricknoll Park, Ashley Road
+ST ALBANS
+Hertfordshire
+AL1 5UG
+GREAT BRITAIN</_ParagraphTo>
+		<_AssociateMembershipNo>E026C000</_AssociateMembershipNo>
+		<_RecipientofInvoice>8007329</_RecipientofInvoice>
+		<_tableData1>Description/Type Part no. Qty Unit price Total
+Order 85556909 Delivery note 55925724
+Your order Ryan / Tomasik/24.01.2018 dated 24.01.2018
+Delivery dated 01.02.2018 from Wendlingen / MCSM
+Delivery conditions DDU St Albans
+Delivery by PackServ/Carrier
+Geared eccentric sander 571784 1
+RO 125 FEQ Plus GB 240V
+HS=84672959 Weight: 4.459 KG Customs value: 239.15
+EAN-Code= 4014549148761
+All goods despatched from
+Festool GmbH
+73240 Wendlingen, Germany
+Payment: current month plus one month</_tableData1>
+		<_tableData2>Value of goods Carriage Packing Net-Invoice-amount VAT % VAT Invoice amount
+0.00 0.00 20.00 0.00 0.00</_tableData2>
+	</_Festool_Document_definition:_Festool_Document_definition>
+</form:Documents>

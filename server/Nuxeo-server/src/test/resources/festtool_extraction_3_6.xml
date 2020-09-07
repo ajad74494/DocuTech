@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<form:Documents xmlns:form="http://www.abbyy.com/FlexiCapture/Schemas/Export/FormData.xsd" xmlns:addData="http://www.abbyy.com/FlexiCapture/Schemas/Export/AdditionalFormData.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<_festool_extraction_v3:_festool_extraction_v3 xmlns:_festool_extraction_v3="http://www.abbyy.com/FlexiCapture/Schemas/Export/festool_extraction_v3.xsd">
+		<_InvoiceTable>
+			<_description>Beechwood DOMINO XL assortment
+DS/XL D8/D10 306x BU
+HS=44219999 Weight: 10.650 KG
+EAN-Code= 4014549162217</_description>
+			<_partNo>498204</_partNo>
+			<_qty>2</_qty>
+			<_unitPrice>155.10</_unitPrice>
+			<_discount>36.00- %</_discount>
+			<_total>198.53</_total>
+		</_InvoiceTable>
+		<_InvoiceTable>
+			<_description>Copying ring
+KR-D 30/OF 900
+HS=73269098 Weight: 0.330 KG
+EAN-Code= 4014549130704</_description>
+			<_partNo>486033</_partNo>
+			<_qty>5</_qty>
+			<_unitPrice>8.35</_unitPrice>
+			<_discount>36.00- %</_discount>
+			<_total>26.72</_total>
+		</_InvoiceTable>
+		<_InvoiceTable>
+			<_description>Copying ring
+KR-D17/OF 900
+HS=73269098 Weight: 0.345 KG
+EAN-Code= 4014549130407</_description>
+			<_partNo>486030</_partNo>
+			<_qty>5</_qty>
+			<_unitPrice>8.35</_unitPrice>
+			<_discount>36.00- %</_discount>
+			<_total>26.72</_total>
+		</_InvoiceTable>
+		<_InvoiceTable>
+			<_description>Dust extraction set
+CS 70 AB
+HS=39174000 Weight: 4.191 KG
+EAN-Code= 4014549066553</_description>
+			<_partNo>488292</_partNo>
+			<_qty>3</_qty>
+			<_unitPrice>71.80</_unitPrice>
+			<_discount>36.00- %</_discount>
+			<_total>137.86</_total>
+		</_InvoiceTable>
+		<_InvoiceTable>
+			<_description>Bolt
+BOLZEN SYS
+HS=39269097 Weight: 0.030 KG
+EAN-Code= 4014549668801</_description>
+			<_partNo>446250</_partNo>
+			<_qty>10</_qty>
+			<_unitPrice>0.78</_unitPrice>
+			<_discount>20.00- %</_discount>
+			<_total>6.24</_total>
+		</_InvoiceTable>
+		<_InvoiceTable>
+			<_description>Diamond grinder
+RG 130 E-Plus GB 240V
+HS=84672959 Weight: 16.090 KG
+EAN-Code= 4014549270455</_description>
+			<_partNo>574800</_partNo>
+			<_qty>2</_qty>
+			<_unitPrice>518.00</_unitPrice>
+			<_discount>20.00- %</_discount>
+			<_total>828.80</_total>
+		</_InvoiceTable>
+		<_InvoiceTable>
+			<_description>Geared eccentric sander
+RO 125 FEQ Plus GB 240V
+HS=84672959 Weight: 8.918 KG
+EAN-Code= 4014549148761</_description>
+			<_partNo>571784</_partNo>
+			<_qty>2</_qty>
+			<_unitPrice>397.00</_unitPrice>
+			<_discount>20.00- %
+- Page 3 -</_discount>
+			<_total>635.20</_total>
+		</_InvoiceTable>
+		<_InvoiceTable>
+			<_description>Value of goods Carriage Packing</_description>
+			<_partNo>Net-Invoice-a</_partNo>
+			<_qty>mount</_qty>
+			<_unitPrice>VAT % VA</_unitPrice>
+			<_discount>&lt;T Invoi</_discount>
+			<_total>ice amount</_total>
+		</_InvoiceTable>
+		<_lCurrency>GBP</_lCurrency>
+		<_lRes>534</_lRes>
+		<_sFestool>festool</_sFestool>
+		<_AssociationMembershipNo>E026C000</_AssociationMembershipNo>
+		<_Order/>
+	</_festool_extraction_v3:_festool_extraction_v3>
+</form:Documents>

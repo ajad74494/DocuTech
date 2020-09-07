@@ -1,0 +1,6 @@
+/****** Object:  Index [idx_user_group]    Script Date: 18/12/2019 12:12:35 ******/
+CREATE NONCLUSTERED INDEX [idx_user_group] ON [dbo].[T_USER]
+(
+	[id_group_key] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, FILLFACTOR = 80) ON [PRIMARY]
+GO

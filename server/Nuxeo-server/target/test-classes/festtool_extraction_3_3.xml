@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<form:Documents xmlns:form="http://www.abbyy.com/FlexiCapture/Schemas/Export/FormData.xsd" xmlns:addData="http://www.abbyy.com/FlexiCapture/Schemas/Export/AdditionalFormData.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<_festool_extraction_v3:_festool_extraction_v3 xmlns:_festool_extraction_v3="http://www.abbyy.com/FlexiCapture/Schemas/Export/festool_extraction_v3.xsd">
+		<_InvoiceTable>
+			<_description>Beechwood DOMINO
+D 10x50/510 BU
+HS=44219999 Weight: 15.688 KG
+EAN-Code= 4014549058978</_description>
+			<_partNo>493300</_partNo>
+			<_qty>4</_qty>
+			<_unitPrice>61.35</_unitPrice>
+			<_discount>36.00- %</_discount>
+			<_total>157.06</_total>
+		</_InvoiceTable>
+		<_InvoiceTable>
+			<_description>Sandpaper
+STF V93/6 P100 GR/100
+HS=68052000 Weight: 1.555 KG
+EAN-Code= 4014549142608
+All goods despatched from
+Festool GmbH
+73240 Wendlingen, Germany</_description>
+			<_partNo>497393</_partNo>
+			<_qty>5</_qty>
+			<_unitPrice>27.70</_unitPrice>
+			<_discount>36.00- %</_discount>
+			<_total>88.64</_total>
+		</_InvoiceTable>
+		<_lCurrency>GBP</_lCurrency>
+		<_lRes>534</_lRes>
+		<_sFestool>Festool</_sFestool>
+		<_AssociationMembershipNo>E026C000</_AssociationMembershipNo>
+		<_Order/>
+	</_festool_extraction_v3:_festool_extraction_v3>
+</form:Documents>

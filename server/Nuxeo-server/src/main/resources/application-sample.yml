@@ -1,0 +1,114 @@
+server:
+  port: 8090
+spring:
+  application:
+    name: Nuxeo Connect
+  datasource:
+    url: jdbc:jtds:sqlserver://blah:1433/blah
+    username: xxxx
+    password: xxx
+    driver-class-name: net.sourceforge.jtds.jdbc.Driver
+    hikari:
+      connection-test-query: SELECT 1
+
+jpa:
+  show-sql: true
+  properties:
+    hibernate.dialect: org.hibernate.dialect.SQLServer2012Dialect
+    default_schema: dbo
+
+
+
+import:
+  template:
+    festoolTemplate-path: C:\\Users\\asadullah.galib\\hotfolder\\Template\\Tmpl - Festool_Invoice1.pdf
+    nmbsTemplate-path: C:\\Users\\asadullah.galib\\hotfolder\\Template\\Tmpl - Curtis_Holt_Invoice1.pdf
+    owlettTemplate-path: C:\\Users\\asadullah.galib\\hotfolder\\Template\\Tmpl - unimer-Owlett-Jaon_raw.pdf
+    aahTemplate-path: C:\\Users\\asadullah.galib\\hotfolder\\Template\\Tmpl - AAH_normalized1.pdf
+    bristanTemplate-path: C:\\Users\\asadullah.galib\\hotfolder\\Template\\Tmpl - Bristan group.pdf
+    dpdTemplate-path: C:\\Users\\asadullah.galib\\hotfolder\\Template\\Tmpl - dpd.pdf
+    apsTemplate-path: C:\\Users\\asadullah.galib\\hotfolder\\Template\\Tmpl - aps.pdf
+    blakladerTemplate-path: C:\\Users\\asadullah.galib\\hotfolder\\Template\\Tmpl - blaklader.pdf
+
+  festool: 
+    festoolFolder-path: \\\\10.33.42.41\\HotFolder
+    archiveFolder-path: C:\\Users\\asadullah.galib\\hotfolder\\Festool\\Archive
+    badFolder-path: C:\\Users\\asadullah.galib\\hotfolder\\Festool\\Bad
+    nuxeoFailedFolder-path: C:\\Users\\asadullah.galib\\hotfolder\\Festool\\NuxeoFailed
+
+  nmbs:
+    nmbsFolder-path: \\\\10.33.42.41\\NMBH_HotFolder
+    archiveFolder-path: C:\\Users\\asadullah.galib\\hotfolder\\Nmbs\\Archive
+    badFolder-path: C:\\Users\\asadullah.galib\\hotfolder\\Nmbs\\Bad
+    nuxeoFailedFolder-path: C:\\Users\\asadullah.galib\\hotfolder\\Nmbs\\NuxeoFailed
+  owlett: 
+    owlettFolder-path: C:\\Users\\asadullah.galib\\hotfolder\\Owlett
+    archiveFolder-path: C:\\Users\\asadullah.galib\\hotfolder\\Owlett\\Archive
+    badFolder-path: C:\\Users\\asadullah.galib\\hotfolder\\Owlett\\Bad
+    nuxeoFailedFolder-path: C:\\Users\\asadullah.galib\\hotfolder\\Owlett\\NuxeoFailed
+    owlettImageFolder-path: C:\\Users\\asadullah.galib\\hotfolder\\Owlett\\ImageFolder
+  aah:
+    aahFolder-path: C:\\Users\\asadullah.galib\\hotfolder\\AAH
+    archiveFolder-path: C:\\Users\\asadullah.galib\\hotfolder\\AAH\\Archive
+    badFolder-path: C:\\Users\\asadullah.galib\\hotfolder\\AAH\\Bad
+    nuxeoFailedFolder-path: C:\\Users\\asadullah.galib\\hotfolder\\AAH\\NuxeoFailed
+
+  bristan:
+    bristanFolder-path: C:\\Users\\asadullah.galib\\hotfolder\\BristanGroup
+    archiveFolder-path: C:\\Users\\asadullah.galib\\hotfolder\\BristanGroup\\Archive
+    badFolder-path: C:\\Users\\asadullah.galib\\hotfolder\\BristanGroup\\Bad
+    nuxeoFailedFolder-path: C:\\Users\\asadullah.galib\\hotfolder\\BristanGroup\\NuxeoFailed
+    
+  dpd:
+    dpdFolder-path: C:\\Users\\asadullah.galib\\hotfolder\\Dpd
+    archiveFolder-path: C:\\Users\\asadullah.galib\\hotfolder\\Dpd\\Archive
+    badFolder-path: C:\\Users\\asadullah.galib\\hotfolder\\Dpd\\Bad
+    nuxeoFailedFolder-path: C:\\Users\\asadullah.galib\\hotfolder\\Dpd\\NuxeoFailed
+    
+    aps:
+      apsFolder-path: C:\\Users\\asadullah.galib\\hotfolder\\Aps
+      archiveFolder-path: C:\\Users\\asadullah.galib\\hotfolder\\Aps\\Archive
+      badFolder-path: C:\\Users\\asadullah.galib\\hotfolder\\Aps\\Bad
+      nuxeoFailedFolder-path: C:\\Users\\asadullah.galib\\hotfolder\\Aps\\NuxeoFailed
+    
+    blaklader:
+      apsFolder-path: C:\\Users\\asadullah.galib\\hotfolder\\Blaklader
+      archiveFolder-path: C:\\Users\\asadullah.galib\\hotfolder\\Blaklader\\Archive
+      badFolder-path: C:\\Users\\asadullah.galib\\hotfolder\\Blaklader\\Bad
+      nuxeoFailedFolder-path: C:\\Users\\asadullah.galib\\hotfolder\\Blaklader\\NuxeoFailed
+
+pdfParser:
+  pdfInputFolder-path: C:\\tmp\\AAH.pdf
+  tesseractFolder-path: C:\\Apps\\Tesseract-OCR 
+  pdfOutputFolder-path: C:\\tmp\\AAH_Raw.pdf
+
+imageRecognition:
+  mailInboxFolder-path: C:\\Users\\asadullah.galib\\hotfolder\\inbox
+  abbyyInboxFolder-path: C:\\Users\\asadullah.galib\\hotfolder\\abby
+  itextInboxFolder-path: C:\\Users\\asadullah.galib\\hotfolder\\itext
+
+nuxeo:
+  url: http://vntdaclsappu031:8080/nuxeo
+  user: naztech.admin
+  pass: n@zt3ch@dm1n
+
+ftp:
+  url: 10.33.44.31
+  port: 21
+  user: test-01
+  pass: test@123
+  downloadPath: C:\\temporary\\
+
+mailcredential:
+  host: mail.ntdac.naztech.local
+  port: 993
+  username: einvoice.test@naztech.us.com
+  password: n@ztech.test123
+  savedirectory: C:\\temporary\\
+
+management:
+  endpoint:
+    shutdown:
+      enabled: true
+archive: 
+  enabled: true

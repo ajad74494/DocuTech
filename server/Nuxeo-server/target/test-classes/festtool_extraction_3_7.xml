@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<form:Documents xmlns:form="http://www.abbyy.com/FlexiCapture/Schemas/Export/FormData.xsd" xmlns:addData="http://www.abbyy.com/FlexiCapture/Schemas/Export/AdditionalFormData.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<_festool_extraction_v3:_festool_extraction_v3 xmlns:_festool_extraction_v3="http://www.abbyy.com/FlexiCapture/Schemas/Export/festool_extraction_v3.xsd">
+		<_InvoiceTable>
+			<_description>All goods despatched from</_description>
+			<_partNo/>
+			<_qty/>
+			<_unitPrice/>
+			<_discount/>
+			<_total/>
+		</_InvoiceTable>
+		<_InvoiceTable>
+			<_description>Festool GmbH</_description>
+			<_partNo/>
+			<_qty/>
+			<_unitPrice/>
+			<_discount/>
+			<_total/>
+		</_InvoiceTable>
+		<_InvoiceTable>
+			<_description>73240 Wendlingen, Germany</_description>
+			<_partNo/>
+			<_qty/>
+			<_unitPrice/>
+			<_discount/>
+			<_total/>
+		</_InvoiceTable>
+		<_lCurrency>GBP</_lCurrency>
+		<_lRes>534</_lRes>
+		<_sFestool>Festool</_sFestool>
+		<_AssociationMembershipNo>E026C000</_AssociationMembershipNo>
+		<_Order/>
+	</_festool_extraction_v3:_festool_extraction_v3>
+</form:Documents>

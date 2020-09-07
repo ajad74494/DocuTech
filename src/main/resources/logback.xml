@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<configuration debug="true" scan="true">
+
+
+	<property resource="logback.properties" />
+
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%date : [%-5level] %thread [%logger{10} %M:%line] %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="DAILY_FILE"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${log.file.dir}/${log.file.name}</file>
+
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${log.file.dir}/${log.file.name}.%d.gz
+			</fileNamePattern>
+			<maxHistory>10</maxHistory>
+		</rollingPolicy>
+
+		<encoder>
+			<pattern>%date : [%-5level] %thread [%logger{10} %M:%line] %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+
+
+	<!-- <logger name="com.nazdaqTechnologies.jdbc" level="DEBUG" /> -->
+
+	<!-- <logger name="io.naztech.nremitlocal" level="INFO" />
+
+	<logger name="org.apache.http" level="INFO" /> -->
+
+
+	<root level="INFO">
+		<appender-ref ref="DAILY_FILE" />
+		<appender-ref ref="STDOUT" />
+	</root>
+
+</configuration>

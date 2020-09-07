@@ -1,0 +1,24 @@
+{
+    "entity-type": "document",
+    "repository": "default",
+    "uid": "e734dd4c-3b51-4501-a5c7-eb84f570ba7f",
+    "path": "/default-domain/workspaces/Sample Content/Test/testInv12233.1554706681089",
+    "type": "invform",
+    "state": "project",
+    "parentRef": "cd261594-fd6d-4a32-aaa7-1d274aa4ba16",
+    "isCheckedOut": true,
+    "isVersion": false,
+    "isProxy": false,
+    "changeToken": "6-1",
+    "isTrashed": false,
+    "title": "Test12",
+    "lastModified": "2019-04-08T06:58:02.693Z",
+    "facets": [
+        "Versionable",
+        "NXTag",
+        "Publishable",
+        "Commentable",
+        "HasRelatedText",
+        "Thumbnail"
+    ]
+}

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid Technologies Online Tools 1.0 (https://www.liquid-technologies.com) -->
+<xs:schema xmlns:tns="http://www.abbyy.com/FlexiCapture/Schemas/Export/Owlett_Document_Definition.xsd" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.abbyy.com/FlexiCapture/Schemas/Export/Owlett_Document_Definition.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="schema2.xsd" namespace="http://www.abbyy.com/FlexiCapture/Schemas/Export/AdditionalFormData.xsd" />
+  <xs:import schemaLocation="schema3.xsd" />
+  <xs:element name="_Owlett_Document_Definition">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="_InvoiceNo" />
+        <xs:element ref="_Address" />
+        <xs:element ref="_DateOfInvoice" />
+        <xs:element ref="_TaxPointDate" />
+        <xs:element ref="_CustomerOrderNo" />
+        <xs:element ref="_DespatchDate" />
+        <xs:element ref="_CustomerACNo" />
+        <xs:element ref="_InvoiceTotal" />
+        <xs:element ref="_Table" />
+      </xs:sequence>
+      <xs:attribute xmlns:q1="http://www.abbyy.com/FlexiCapture/Schemas/Export/AdditionalFormData.xsd" ref="q1:ImagePath" use="required" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,7 @@
+{
+    "framework": "jasmine",
+    "libs": [],
+    "coverageFilters": [],
+    "scenarios": [],
+    "pageObjects": []
+}

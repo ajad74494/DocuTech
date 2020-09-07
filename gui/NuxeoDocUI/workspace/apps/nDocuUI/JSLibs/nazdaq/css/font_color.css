@@ -1,0 +1,59 @@
+/*@import 'GridExportPdf-all_1.css';
+@import 'GridExportPdf-all_2.css';*/
+
+body {
+    padding: 50px 20px 0 20px;
+}
+
+.x-cell {
+    color:red;
+    font-weight: bold;
+}
+
+.x-row-red {
+    color:red;
+    font-weight: bold;
+}
+.x-row-dark-orange {
+    color:#CC7A00;
+}
+.x-row-orange {
+    color:orange;
+}
+.x-row-blue {
+    color:blue;
+}
+
+.x-row-green {
+    color:green;
+}
+
+.x-cell-no-color {
+    color:black;
+}
+
+.x-cell-white
+{
+    color:#fff;
+   /* font-weight: bold;*/
+    font-size: 13px;
+}
+
+.colortext
+{
+    color:#CC7A00;
+    font-size: 13px;
+}
+
+.textStyle
+{
+    color:#fff;
+    font-size: 14px;
+    font-style: oblique;
+    font-family: cursive;
+}
+
+.x-backgroun-dark-orange {
+   color:     #990000;
+   background-color:  #ffe6e6
+}

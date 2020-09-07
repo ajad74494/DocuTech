@@ -1,0 +1,99 @@
+//URL_DEV: http://localhost:8080/docutech/jsonRequest
+//URL_PROD: http://host:port/DOCUTECH/docutech/jsonRequest
+//REQUEST:
+{
+    "header": {
+        "source": "Docutech-client",
+        "secretId": "ac93b389-dc61-4b2b-bae2-a1f52d4d8f1b",
+        "contentType": "Document",
+        "destination": "Nuxeo-server",
+        "actionType": "SELECT",
+        "id": "c269c8b8-1a65-4f39-a922-1fc47eaa8533",
+        "timestamp": 1489656460036,
+        "nMessageVer": "1.0.0",
+        "sequenceNumber": 1,
+        "clientUid": "74478e79-7bd8-4536-a61d-7f99c20df457"
+    },
+    "payload": {
+        "docId": 100004,
+        "invoiceNumber": "I16244968"
+    }
+}
+
+//RESPONSE:
+{
+    "header": {
+        "actionType": "SELECT",
+        "sequenceNumber": 1.0,
+        "utcTimestamp": 1571293291,
+        "clientUid": "74478e79-7bd8-4536-a61d-7f99c20df457",
+        "destination": "Docutech-client",
+        "secretId": "ac93b389-dc61-4b2b-bae2-a1f52d4d8f1b",
+        "correlationId": "1c9675c1-6ff1-4b6d-9a1c-bd92f45d14c9",
+        "nMessageVer": "1.0.0",
+        "source": "Nuxeo-server",
+        "id": "075cd403-8a7e-477c-879e-74831f521004",
+        "contentType": "MULTI",
+        "tzName": "Asia/Dhaka"
+    },
+    "payload": [{
+        "header": {
+            "actionType": "SELECT",
+            "sequenceNumber": 1.0,
+            "utcTimestamp": 1571293291,
+            "clientUid": "74478e79-7bd8-4536-a61d-7f99c20df457",
+            "destination": "Docutech-client",
+            "secretId": "ac93b389-dc61-4b2b-bae2-a1f52d4d8f1b",
+            "correlationId": "1c9675c1-6ff1-4b6d-9a1c-bd92f45d14c9",
+            "nMessageVer": "1.0.0",
+            "source": "Nuxeo-server",
+            "id": "fe626aef-bbb9-4f42-b6bb-9ba66e39767e",
+            "contentType": "STATUS",
+            "tzName": "Asia/Dhaka"
+        },
+        "payload": [{}]
+    }, {
+        "header": {
+            "actionType": "SELECT",
+            "utcTimestamp": 1571293291,
+            "destination": "Nuxeo-server",
+            "source": "Docutech-client",
+            "id": "106cbdcb-ab42-4e0f-a637-6b73ba2f1894",
+            "contentType": "Document",
+            "tzName": "Asia/Dhaka"
+        },
+        "payload": [{
+            "docId": 100004,
+            "docVer": 2,
+            "supplierNumber": "0",
+            "deliveryNoteNo": 0,
+            "receiptNo": 0,
+            "documentNumber": 0,
+            "recipientOfInvoice": 0,
+            "vatNumber": "0",
+            "invoiceNumber": "I16244968",
+            "currency": "YEN",
+            "accountNumber": "",
+            "voucherNumber": "",
+            "faxNumber": "",
+            "associationNumber": "",
+            "companyAddress": "Bristan Group Limited, Birch Coppice Business Park, Dordon, Tamworth, Staffordshire B78 1SG",
+            "invoiceTo": "",
+            "deliverTo": "104 Junction Road\nLondon\nN19 5LB\nGB - UNITED KINGDOM",
+            "orderId": "",
+            "deliveryNote": "",
+            "deliveryDetails": "",
+            "paymentDetails": "",
+            "vat": 36.47999954223633,
+            "vatRate": 0.0,
+            "vatPayable": 0.0,
+            "invoiceAmount": 0.0,
+            "totalBeforeVat": 36.47999954223633,
+            "totalAmountDue": 0.0,
+            "discount": 0.0,
+            "netInvoiceTotal": 218.88999938964844,
+            "modifiedOn": "2019-10-16 14:50:13 +0600",
+            "documentDate": "2019-07-26 00:00:00 +0600"
+        }]
+    }]
+}

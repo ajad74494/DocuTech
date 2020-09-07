@@ -1,0 +1,16 @@
+##Nuxeo-Connect changelog
+##Sample structure for adding block
+========================================================================
+Date: 28-04-2020
+Author: asadullah.galib 
+Places of changes: ClassName-->MethodName:
+Explanation of changes:
+===========================================================================
+***Please, Everyone add your changelog block below here whenever something has changed by you.  
+
+========================================================================
+Date: 28-04-2020
+Author: BM Al-Amin
+Places of changes: import lines and other unused methods
+Explanation of changes: remove unused import lines and add @SuppressWarnings("unused") on the methods
+===========================================================================
