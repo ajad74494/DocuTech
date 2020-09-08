@@ -35,6 +35,7 @@ public class InvoiceTable {
 	private String vatCode;
 	private String type;
 	private String preDiscount;
+	private String vatRate;
 	
 	public String getQuantity() {
 		return quantity;
@@ -239,6 +240,12 @@ public class InvoiceTable {
 	}
 	public void setPreDiscount(String preDiscount) {
 		this.preDiscount = preDiscount;
+	}
+	public String getVatRate() {
+		return vatRate;
+	}
+	public void setVatRate(String vatRate) {
+		this.vatRate = vatRate;
 	}
 	@Override
 	public String toString() {

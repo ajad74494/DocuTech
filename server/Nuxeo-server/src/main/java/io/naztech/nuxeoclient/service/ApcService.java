@@ -95,10 +95,10 @@ public class ApcService implements PdfInvoiceProcessor {
  
 		try {
 			invoice.setSortName(Constants.APC);
-//			invoice.setInvoiceTitel(nuxeoinvoiceName);
-//			invoice.setInvoiceDescription(desc);
-//			invoice.setPrefix(prefix);
-//			invoice.setInvoiceType(nuxeoinvoiceType);
+			invoice.setInvoiceTitle("apc");
+			invoice.setInvoiceDescription("apc");
+			invoice.setPrefix("apc");
+			invoice.setInvoiceType("apc");
 			String json = pdfStr;
 			String suplierAddredd[] = json.split(phone);
 			String suplierName[] = suplierAddredd[0].trim().split("\\n");

@@ -212,7 +212,7 @@ public class BiffaService implements PdfInvoiceProcessor {
 					nettotal = untPrice[1].replaceAll(invoiceTableA2, "$6");
 				}
 				if (!pattern.matcher(quentityA4[i].trim()).find()) {
-					description1 = quentityA4[i].trim();
+					description1 += quentityA4[i].trim();
 				}
 				invoicetab.setUnitPrice(discount.trim());
 				invoicetab.setTotal(nettotal.trim());

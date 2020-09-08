@@ -173,6 +173,10 @@ public final class Constants {
 	public static final String TOPSERVICE = "TOPS";
 	public static final String PROKOL = "PROK";
 	public static final String CSYRETAIL = "CSYR";
+	public static final String CIRET = "CIRET";
+	public static final String FORKTRUCK = "FORKTRUCK";
+	public static final String JHONSON = "JHONSON";
+	public static final String PTS = "PTS";
 
 	public static final String FALSE = "false";
 	public static final String TRUE = "true";

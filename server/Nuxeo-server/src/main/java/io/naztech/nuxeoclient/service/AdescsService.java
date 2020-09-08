@@ -13,11 +13,15 @@ import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Service;
 
 import io.github.jonathanlink.PDFLayoutTextStripper;
 import io.naztech.nuxeoclient.model.Invoice;
 import io.naztech.nuxeoclient.model.InvoiceTable;
-
+/**
+ * @author masud.ahmed
+ */
+@Service
 public class AdescsService  implements PdfInvoiceProcessor {
 	@Autowired
 	NuxeoClientService nuxeoClientService;
@@ -63,31 +67,31 @@ public class AdescsService  implements PdfInvoiceProcessor {
 	@Value("${adescs.invoiceDateRgx}")
 	private String invoiceDateRgx;
 	
-	@Value("${import.orderNoRgx}")
+	@Value("${adescs.orderNoRgx}")
 	private String orderNoRgx ;
 	
-	@Value("${import.accountNoRgx}")
+	@Value("${adescs.accountNoRgx}")
 	private String accountNoRgx ;
 	
-	@Value("${import.totalNetRgx}")
+	@Value("${adescs.totalNetRgx}")
 	private String totalNetRgx ;
 	
-	@Value("${import.totalVatRgx}")
+	@Value("${adescs.totalVatRgx}")
 	private String totalVatRgx ;
 	
-	@Value("${import.invoiceTotalRgx}")
+	@Value("${adescs.invoiceTotalRgx}")
 	private String invoiceTotalRgx;
 	
-	@Value("${import.tableHeaderRgx}")
+	@Value("${adescs.tableHeaderRgx}")
 	private String tableHeaderRgx ;
 	
-	@Value("${import.tableRgx}")
+	@Value("${adescs.tableRgx}")
 	private String tableRgx ;
 	
-	@Value("${import.tableEndRgx}")
+	@Value("${adescs.tableEndRgx}")
 	private String tableEndRgx ;
 	
-	@Value("${import.descRgx}")
+	@Value("${adescs.descRgx}")
 	private String descRgx ;
 
 	@Override

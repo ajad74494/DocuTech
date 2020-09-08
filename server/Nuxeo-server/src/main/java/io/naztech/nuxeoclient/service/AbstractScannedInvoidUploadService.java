@@ -36,9 +36,9 @@ public abstract class AbstractScannedInvoidUploadService {
 			Files.copy(Paths.get(file.getAbsolutePath()), Paths.get(archive + File.separator + file.getName()),
 					StandardCopyOption.REPLACE_EXISTING);
 
-		if (!new File(archive + File.separator + file.getName()).exists())
-			Files.copy(Paths.get(file.getAbsolutePath()), Paths.get(archive + File.separator + file.getName()),
-					StandardCopyOption.REPLACE_EXISTING);
+//		if (!new File(archive + File.separator + file.getName()).exists())
+//			Files.copy(Paths.get(file.getAbsolutePath()), Paths.get(archive + File.separator + file.getName()),
+//					StandardCopyOption.REPLACE_EXISTING);
 	}
 
 	protected void moveToBadFolder(String badfolderPath, File file, String strDate) throws IOException {
@@ -51,9 +51,9 @@ public abstract class AbstractScannedInvoidUploadService {
 			Files.move(Paths.get(file.getAbsolutePath()), Paths.get(badFolderPath + File.separator + file.getName()),
 					StandardCopyOption.REPLACE_EXISTING);
 
-		if (!new File(badFolderPath + File.separator + file.getName()).exists())
-			Files.move(Paths.get(file.getAbsolutePath()), Paths.get(badFolderPath + File.separator + file.getName()),
-					StandardCopyOption.REPLACE_EXISTING);
+//		if (!new File(badFolderPath + File.separator + file.getName()).exists())
+//			Files.move(Paths.get(file.getAbsolutePath()), Paths.get(badFolderPath + File.separator + file.getName()),
+//					StandardCopyOption.REPLACE_EXISTING);
 	}
 
 	protected void moveToNuxeoFailed(String nuxeoFailedFolderPath, File invoiceInfoXml, List<File> attachments,
@@ -131,7 +131,7 @@ public abstract class AbstractScannedInvoidUploadService {
 			value = value.trim();
 
 			if (value.contains("$") || value.contains("£") || value.contains(",") || value.contains("*")
-					|| value.contains("GBP")) {
+					|| value.contains("GBP") || value.contains("GB")) {
 
 				value = value.replaceAll("[$£*a-zA-Z,]", "").trim();
 			}

@@ -66,15 +66,6 @@ public class HoppingSoftwoodService implements PdfInvoiceProcessor  {
 	@Value("${archive.enabled}")
 	private boolean enabled;
 
-	/**
-	 * Constructs a OnsiteDocument object from the xml file
-	 * 
-	 * @param file
-	 * @return FestoolInvoice Object
-	 * @throws IOException
-	 */
-
-
 	@Value("${hopping.supplierName}")
 	private String supplierName;
 	
@@ -151,10 +142,10 @@ public class HoppingSoftwoodService implements PdfInvoiceProcessor  {
 		try {
 
 			invoice.setSortName(Constants.HOPPINGS);
-//			invoice.setInvoiceTitle(nuxeoinvoiceName);
-//			invoice.setInvoiceDescription (desc);
-//			invoice.setPrefix(prefix);
-//			invoice.setInvoiceType(nuxeoinvoiceType);
+			invoice.setInvoiceTitle(nuxeoinvoiceName);
+			invoice.setInvoiceDescription (desc);
+			invoice.setPrefix(prefix);
+			invoice.setInvoiceType(nuxeoinvoiceType);
 			invoice.setInvoiceTitle("handling");
 			invoice.setInvoiceDescription(desc);
 			invoice.setPrefix("handling");

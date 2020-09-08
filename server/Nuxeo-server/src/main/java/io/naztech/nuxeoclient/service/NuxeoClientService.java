@@ -11,21 +11,22 @@ import org.nuxeo.client.objects.upload.BatchUpload;
 import org.nuxeo.ecm.automation.client.Session;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
 
 import io.naztech.nuxeoclient.model.DocumentWrapper;
-/*import lombok.Setter;*/
+import io.naztech.nuxeoclient.model.Invoice;
 
 /**
- * TODO ISSUE can not get custom attributes (properties) using
- * getDocumentById/Path call.
- * 
- * @author armaan.choudhury
- * @since 2019-04-15
+ * @author muhammad.tarek
+ * @since 2020-09-06
  */
 @Named
 /* @Setter */
 public class NuxeoClientService {
 	private static Logger log = LoggerFactory.getLogger(NuxeoClientService.class);
+
+	@Value("${import.nuxeo.RepoPath}")
+	private String repoPath;
 
 	private Session clientSession;
 	private NuxeoClient nuxeoClient;
@@ -57,30 +58,10 @@ public class NuxeoClientService {
 		}
 		Document doc = req.buildDocument();
 		try {
-			/* Create a document in Nuxeo platform repository */
-			 
-			log.info(doc.getId());
-			log.info(doc.getIsCheckedOut());
-			log.info(doc.getName());
-			log.info(doc.getPath());
-			log.info(doc.getLastModified());
-			log.info(doc.getLock());
-			log.info(doc.getLockCreated());
-			log.info(doc.getRepositoryName());
-			log.info(doc.getPath());
-			log.info(doc.getType());
-			log.info(doc.getUid());
-			log.info(doc.getChangeToken());
-			
-			
-			doc = nuxeoClient.repository().createDocumentByPath(req.getRepoPath(), req.buildDocument()); 
-			log.info(doc.toString()); 
+			doc = nuxeoClient.repository().createDocumentByPath(req.getRepoPath(), req.buildDocument());
 		} catch (Exception e) {
 			log.info(e.getMessage());
 		}
-		// return req.getFiles().size() == 1 ? uploadOneFile(doc, req.getFiles().get(0))
-		// : uploadMultipleFiles(doc, req);
-		log.info("Hi"+uploadOneFile(doc, req.getFile()));
 		return uploadOneFile(doc, req.getFile());
 	}
 
@@ -97,23 +78,65 @@ public class NuxeoClientService {
 		return doc.updateDocument();
 	}
 
-//	private Document uploadMultipleFiles(Document doc, DocumentWrapper req) throws NuxeoDocumentServiceException {
-//		DocRef docRef = new DocRef(doc.getId());
-//		DocumentService autoService = clientSession.getAdapter(DocumentService.class);
-//		// TODO maybe save first file in "file:content" and rest in <schemaTag>:files
-//		for (File file : req.getFiles()) {
-//			if (!file.isFile())
-//				continue;
-//			try {
-//				autoService.setBlob(docRef, new FileBlob(file), req.getType() + ":files");
-//			} catch (IOException | NuxeoClientRemoteException e) {
-//				throw new NuxeoDocumentServiceException(e);
-//			}
-//		}
-//		return doc;
-//	}
-
 	public Document getDocument(String pathOrId) {
+		Document ob = nuxeoClient.repository().fetchDocumentById(pathOrId);
+		if (ob == null)
+			ob = nuxeoClient.repository().fetchDocumentByPath(pathOrId);
+		return ob;
+	}
+
+	public DocumentWrapper convertInvoiceToDocumentReq(Invoice inv) {
+
+		if (inv == null)
+			return null;
+
+		try {
+			DocumentWrapper ob = DocumentWrapper.createWithName(inv.getInvoiceTitle(), inv.getInvoiceType());
+
+			// Setting attributes of the document wrapper object
+			ob.setTitle(inv.getInvoiceTitle());
+			ob.setDescription(inv.getInvoiceDescription());
+			ob.setPrefix(inv.getPrefix());
+			ob.setRepoPath(repoPath);
+
+			ob.addAttribute("product_number", inv.getReferenceNumber());
+			ob.addAttribute("customer_address", inv.getCustomerAddress());
+			ob.addAttribute("customer_name", inv.getCustomerName());
+			ob.addAttribute("delivery_date", inv.getDeliveryDate());
+			ob.addAttribute("delivery_note", inv.getDeliveryNoteNo());
+			ob.addAttribute("despatch_date", inv.getDespatchDate());
+			ob.addAttribute("discoun", inv.getDiscount());
+			ob.addAttribute("due_date", inv.getDueDate());
+			ob.addAttribute("invoice_date", inv.getInvoiceDate());
+			ob.addAttribute("invoice_number", inv.getInvoiceNumber());
+			ob.addAttribute("email", inv.getEmail());
+			ob.addAttribute("fax_number", inv.getFax());
+			ob.addAttribute("net_invoice_total", inv.getGrossTotal());
+			ob.addAttribute("reference_number", inv.getReferenceNumber());
+			ob.addAttribute("supplier_address", inv.getSupplierAddress());
+			ob.addAttribute("supplier_name", inv.getSupplierName());
+			ob.addAttribute("telephone_number", inv.getTelephone());
+			ob.addAttribute("total_amount", inv.getNetTotal());
+			ob.addAttribute("total_due ", inv.getDue());
+			ob.addAttribute("vat_reg_number", inv.getVatReg());
+			ob.addAttribute("reg_number", inv.getVatReg());
+			ob.addAttribute("vat_total", inv.getVatTotal());
+			ob.addAttribute("despatch_note", inv.getDeliveryNoteNo());
+			ob.addAttribute("account_number", inv.getAccountNo());
+			ob.addAttribute("order_number", inv.getOrderNo());
+			ob.addAttribute("customer_number", "inv.getGrossTotal()");
+			ob.addAttribute("website", inv.getWebsite());
+			ob.addAttribute("delivery_address", inv.getDeliveryAddress());
+			ob.addAttribute("carriage_net", inv.getCarriageNet());
+			ob.addAttribute("currency", inv.getCurrency());
+			return ob;
+		} catch (Exception e) {
+			log.error("Failed to convert to Document Wrapper Object", e);
+			return null;
+		}
+	}
+
+	public Document getDocumentByPathOrId(String pathOrId) {
 		Document ob = nuxeoClient.repository().fetchDocumentById(pathOrId);
 		if (ob == null)
 			ob = nuxeoClient.repository().fetchDocumentByPath(pathOrId);

@@ -11,34 +11,41 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
+import io.naztech.nuxeoclient.constants.Constants;
 import io.naztech.nuxeoclient.model.Invoice;
 import io.naztech.nuxeoclient.model.InvoiceTable;
 
 /**
  * 
- * @author Masud.ahmed
+ * @author mazhar.alam
  * @since 2020-08-16
  *
  */
 @Service
-public class HSSService implements PdfInvoiceProcessor {
+public class HSSService implements PdfInvoiceProcessorPdfBox {
 	private static Logger log = LoggerFactory.getLogger(HSSService.class);
 	@Autowired
 	NuxeoClientService nuxeoClientService;
 
 	private Invoice invoice = new Invoice();
 
-	@Value("${import.adafastfix.Name}")
+	@Value("${folder.name.hssecurity}")
+	private String folderName;
+
+	@Value("${import.hssecurity.Name}")
 	private String nuxeoinvoiceName;
 
-	@Value("${import.adafastfix.type}")
+	@Value("${import.hssecurity.type}")
 	private String nuxeoinvoiceType;
 
-	@Value("${import.adafastfix.prefix}")
+	@Value("${import.hssecurity.prefix}")
 	private String prefix;
 
-	@Value("${import.nuxeo.adafastfix.description}")
+	@Value("${import.nuxeo.invoice.description}")
 	private String desc;
+
+	@Value("${import.pdfType}")
+	private String pdfType;
 
 	@Value("${hss.supplierName}")
 	private String supplierName;
@@ -95,23 +102,20 @@ public class HSSService implements PdfInvoiceProcessor {
 	private String descRgx;
 
 	@Override
-	public Invoice processPdfInvoice(String pdfStr, File pdfInvoice) {
-		String data = "", textStriper = "";
-
+	public Invoice processPdfInvoice(String pdfStr, String pdfBoxStr, File pdfInvoice) {
+		String data = pdfStr, textStriper = pdfBoxStr;
+		System.out.println(data);
 		Invoice invoice = new Invoice();
 		ArrayList<InvoiceTable> tableList = new ArrayList<>();
 
-		// invoice.setSortName(Constants.VR);
-		// invoice.setInvoiceTitel(nuxeoinvoiceName);
-		// invoice.setInvoiceDescription(desc);
-		// invoice.setPrefix(prefix);
-		// invoice.setInvoiceType(nuxeoinvoiceType);
+		invoice.setSortName(Constants.HSSECURITYSERVICESLTD);
+		invoice.setInvoiceTitle(nuxeoinvoiceName);
+		invoice.setInvoiceDescription(desc);
+		invoice.setPrefix(prefix);
+		invoice.setInvoiceType(nuxeoinvoiceType);
 
 		String subData = null;
-		String subDataXtra = null;
 		String[] dataArray = null;
-		String[] dataArrayCopy = null;
-		String[] multiPageData = null;
 		// ============== supplier details ============== //
 		invoice.setSupplierName(supplierName);
 		invoice.setSupplierAddress(supplierAddress);

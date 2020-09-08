@@ -17,7 +17,7 @@ import io.naztech.nuxeoclient.model.InvoiceTable;
 
 /**
  * 
- * @author abul.kalam
+ * @author mazhar.alam
  * @since 2020-07-22
  *
  */

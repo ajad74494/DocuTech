@@ -36,7 +36,7 @@ public class DocumentWrapper extends Document {
 		ob.setPropertyValue(prefix + ":supplier_name", "getValue()"); 
 		for (Entry<String, Object> en : attributes.entrySet()) {
 			log.info("key = " + prefix + ":" + en.getKey() + "\t\tValue" + en.getValue());
-			ob.setPropertyValue(prefix + en.getKey(), en.getValue());
+			ob.setPropertyValue(prefix+ ":" + en.getKey(), en.getValue());
 		}
 		// TODO whether there is file in list, if not throw exception
 		return ob;

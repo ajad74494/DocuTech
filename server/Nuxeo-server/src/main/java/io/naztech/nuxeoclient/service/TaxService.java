@@ -13,11 +13,17 @@ import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Service;
 
 import io.github.jonathanlink.PDFLayoutTextStripper;
 import io.naztech.nuxeoclient.model.Invoice;
 import io.naztech.nuxeoclient.model.InvoiceTable;
-
+/**
+ * 
+ * @author masud.ahmed
+ * @since 
+ */
+@Service
 public class TaxService implements PdfInvoiceProcessor {
 	@Autowired
 	NuxeoClientService nuxeoClientService;

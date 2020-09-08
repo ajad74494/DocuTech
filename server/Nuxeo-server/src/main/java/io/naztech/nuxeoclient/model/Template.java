@@ -268,4 +268,16 @@ public class Template {
 		return rs2BeanMap;
 	}
 
+	@Override
+	public String toString() {
+		return "Template [docCountId=" + docCountId + ", templateId=" + templateId + ", templateVer=" + templateVer
+				+ ", isTmpltExist=" + isTmpltExist + ", isSentToNuxeo=" + isSentToNuxeo + ", isTemplateParsed="
+				+ isTemplateParsed + ", isParsedSuccessful=" + isParsedSuccessful + ", pdfType=" + pdfType
+				+ ", processorType=" + processorType + ", clientName=" + clientName + ", supplierName=" + supplierName
+				+ ", docSource=" + docSource + ", receivedDocId=" + receivedDocId + ", docType=" + docType
+				+ ", errorIssue=" + errorIssue + ", errorIssueSource=" + errorIssueSource + ", fileName=" + fileName
+				+ ", modifiedOn=" + modifiedOn + ", fromDate=" + fromDate + ", toDate=" + toDate + "]";
+	}
+	
+
 }

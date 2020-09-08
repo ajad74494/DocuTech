@@ -129,10 +129,10 @@ public class FalconService implements PdfInvoiceProcessor {
 			invoice.setSupplierName(supplierName);
 
 			invoice.setSortName(Constants.FALCON);
-			invoice.setInvoiceTitle("Falcon");
+			invoice.setInvoiceTitle("falcon");
 			invoice.setInvoiceDescription(desc);
 			invoice.setPrefix("falcon");
-			invoice.setInvoiceType(nuxeoinvoiceType); 
+			invoice.setInvoiceType("falcon"); 
 			String json = pdfStr;
 			try {
 				// ============ INvoice =====================
